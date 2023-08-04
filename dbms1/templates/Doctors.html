@@ -2,16 +2,17 @@
 <html>
 <head>
   <title>Doctor Details Form</title>
+  {%load static%}
   <style>
     body {
       font-family: Arial, sans-serif;
-      background-color: #f2f2f2;
+      background-color: #2f2020;
     }
     .container {
       width: 400px;
       margin: 50px auto;
       padding: 20px;
-      background-color: #ffffff;
+      background-color: #290b0b;
       border-radius: 5px;
       box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     }
@@ -29,7 +30,7 @@
     }
     input[type="submit"] {
       background-color: #4CAF50;
-      color: white;
+      color: rgb(57, 57, 57);
       padding: 10px 15px;
       border: none;
       border-radius: 4px;
@@ -42,7 +43,7 @@
   <script src="https://cdn.tailwindcss.com"></script>
 
 </head>
-<body>
+<body class="dark:bg-gray-900 text-white bg:gray-200">
   {% if messages %}
   {% for message in messages %}
   <div class="bg-red-100 border border-red-400 text-red-700 px-4 py-3 rounded relative" role="alert">
@@ -54,6 +55,8 @@
  
 {% endif %}
   <div class="container">
+  <div class="flex flex-row  items-center justify-center">
+    <div class="w-[50%]">
     <h2>Doctor Details</h2>
     <form method="get">
       <label for="name">Name:</label>
@@ -67,6 +70,14 @@
 
       <input type="submit" value="Submit">
     </form>
+  </div>
+<div class="w-[50%]">
+  <img src="{% static 'pills.png' %}" alt="">
+</div>
+
+
+
+  </div>
   </div>
 </body>
 </html>
